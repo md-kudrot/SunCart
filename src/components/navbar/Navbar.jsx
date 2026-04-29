@@ -4,7 +4,7 @@ import React from 'react';
 const Navbar = () => {
 
     const link = <>
-        <li className='text-[#708dcc] '><a>Home</a></li>
+        <li><a>Home</a></li>
         <li><a>Products</a></li>
         <li><a>My Profile</a></li>
     </>
@@ -12,18 +12,7 @@ const Navbar = () => {
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
-                <div className="navbar-start">
-
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <Image
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                                width={40}  // Add this
-                                height={40} // Add this
-                            />
-                        </div>
-                    </div>
+                <div className="navbar-start ">
 
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,13 +26,26 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">SunCart</a>
+
+                    {/* img div */}
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <Image
+                                alt="Tailwind CSS Navbar component"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                                width={40}  // Add this
+                                height={40} // Add this
+                            />
+                        </div>
+                    </div>
+
+                    <a className="btn btn-ghost text-xl ">SunCart</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                       {
-                        link
-                       }
+                        {
+                            link
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">
