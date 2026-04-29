@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "UV Protection Sunglasses",
+        "brand": "SunShade",
+        "price": 15,
+        "rating": 4.7,
+        "stock": 10,
+        "description": "High-quality UV400 protection to keep your eyes safe from harmful rays while staying stylish.",
+        "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=500&q=80",
+        "category": "Accessories"
+    },
+    {
+        "id": 2,
+        "name": "Organic Cotton T-Shirt",
+        "brand": "BreezeWear",
+        "price": 25,
+        "rating": 4.5,
+        "stock": 45,
+        "description": "Breathable and lightweight organic cotton fabric, perfect for staying cool in extreme heat.",
+        "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80",
+        "category": "Apparel"
+    },
+    {
+        "id": 3,
+        "name": "Portable Neck Fan",
+        "brand": "CoolTech",
+        "price": 30,
+        "rating": 4.8,
+        "stock": 25,
+        "description": "Hands-free cooling with 3-speed settings and a long-lasting rechargeable battery.",
+        "image": "https://images.unsplash.com/photo-1627309302198-09a50ae1b209?auto=format&fit=crop&w=500&q=80",
+        "category": "Electronics"
+    },
+    {
+        "id": 4,
+        "name": "Mineral Sunscreen SPF 50",
+        "brand": "SkinGuard",
+        "price": 18,
+        "rating": 4.6,
+        "stock": 100,
+        "description": "Non-greasy, water-resistant mineral sunscreen that provides broad-spectrum protection.",
+        "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80",
+        "category": "Skincare"
+    },
+    {
+        "id": 5,
+        "name": "Insulated Water Bottle",
+        "brand": "HydroPeak",
+        "price": 22,
+        "rating": 4.9,
+        "stock": 60,
+        "description": "Double-walled vacuum insulation that keeps your drinks ice-cold for up to 24 hours.",
+        "image": "https://images.unsplash.com/photo-1523362622602-fa2455ed09fe?auto=format&fit=crop&w=500&q=80",
+        "category": "Kitchenware"
+    },
+    {
+        "id": 6,
+        "name": "Wide Brim Straw Hat",
+        "brand": "BeachVibe",
+        "price": 20,
+        "rating": 4.3,
+        "stock": 15,
+        "description": "Classic woven design with a wide brim to provide maximum shade for your face and neck.",
+        "image": "https://images.unsplash.com/photo-1533448955268-f12a8127bc0a?auto=format&fit=crop&w=500&q=80",
+        "category": "Accessories"
+    }
+]
