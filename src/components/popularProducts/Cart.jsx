@@ -4,11 +4,12 @@ import React from 'react';
 const Cart = ({ product }) => {
     return (
         <div>
-            <div className="bg-base-100 shadow-xl p-2 border border-gray-500 rounded-2xl">
-                <figure>
-                    <Image className="rounded-2xl w-full" src={product.image} alt={product.name} width={200} height={125} />
+            <div className="bg-base-100 flex flex-col shadow-xl p-4 border border-gray-500 rounded-2xl">
+                <figure className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-2xl">
+                    <Image src={product.image} alt={product.name} fill className="object-cover" />
                 </figure>
-                <div className="mt-4">
+
+                <div className="mt-4 flex-1">
                     <div className="flex items-start justify-between gap-4">
                         <h2 className="card-title text-4xl">{product.name}</h2>
                         <div className="text-yellow-500 text-2xl font-semibold">★ 4.8</div>
