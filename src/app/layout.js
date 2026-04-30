@@ -1,6 +1,10 @@
+import dns from 'node:dns';
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 
 const geistSans = Geist({
@@ -28,8 +32,8 @@ export default function RootLayout({ children }) {
         <Navbar></Navbar>
         <main className="max-w-7xl mx-auto">
           {children}
-         
         </main>
+        <Footer></Footer>
       </body>
     </html>
   );
