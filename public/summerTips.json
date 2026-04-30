@@ -1,0 +1,21 @@
+
+    [
+        {
+            "id": 1,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Sunscreen_lotion.jpg/500px-Sunscreen_lotion.jpg",
+            "title": "Use Sunscreen",
+            "description": "Apply sunscreen with SPF 30 or higher at least 20 minutes before stepping out to protect your skin from harmful UV rays."
+        },
+        {
+            "id": 2,
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Water_pouring_into_glass.jpg/500px-Water_pouring_into_glass.jpg",
+            "title": "Stay Hydrated",
+            "description": "Drink plenty of water and fresh juices daily to keep your body hydrated and maintain your skin's natural glow during the intense heat."
+        },
+        {
+            "id": 3,
+            "image": " https://kbmartbd.com/image/cache/catalog/Cosmetics/Simple/422306173_390365506908247_8201006098268356445_n-550x550.jpg.webp",
+            "title": "Use Light Moisturizers",
+            "description": "Swap out heavy creams for a water-based or gel moisturizer. It will keep your skin feeling fresh and hydrated without being sticky."
+        }
+    ]

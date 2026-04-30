@@ -1,16 +1,17 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
 
     const link = <>
-        <li><a>Home</a></li>
-        <li><a>Products</a></li>
-        <li><a>My Profile</a></li>
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="/products">Products</Link></li>
+        <li><Link href="/profile">My Profile</Link></li>
     </>
 
     return (
-        <div>
+        <div className="container mx-auto">
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start ">
 

@@ -1,5 +1,5 @@
 import Hero from "@/components/hero/Hero";
-import PopularCart from "@/components/popularProducts/PopularCart";
+import PopularCart from "@/app/popularSection/page";
 
 export default function Home() {
   return (
