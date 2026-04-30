@@ -30,7 +30,7 @@ const Cart = ({ product }) => {
                 </div>
                 <div className="pt-4">
                     <Link href={`/popularSection/${product.id}`}>
-                        <button className="btn bg-[#3b46a0] text-2xl py-6 w-full rounded-2xl btn-primary">View Details</button>
+                        <button className="btn bg-[#00575E] text-[#F0B100] text-2xl py-6 w-full rounded-2xl btn-primary">View Details</button>
                     </Link>
                 </div>
             </div>
