@@ -26,7 +26,7 @@ const Profile = () => {
                 <p className="text-sm md:text-base lg:text-lg text-gray-400 mt-2 md:mt-3 text-center break-all">{user?.email}</p>
 
                 {/* <UpdateUserModal></UpdateUserModal> */}
-                <Button>
+                <Button className='bg-[#00575E] text-[#F0B100]'>
                     <Link href='/profile/editprofile'>
                         Update Profile
                     </Link>

@@ -52,12 +52,12 @@ const Editprofile = () => {
                         </label>
 
                         <div className="flex gap-1 sm:gap-2 md:gap-2 lg:gap-2 flex-col sm:flex-row">
-                            <Button type="submit">
+                            <Button type="submit" className='bg-[#00575E] text-[#F0B100]'>
                                 <Check
                                 />
                                 Submit
                             </Button>
-                            <Button type="reset" variant="secondary">
+                            <Button type="reset" variant="secondary" className={'bg-[#00575E] text-[#66ac17]'}>
                                 Reset
                             </Button>
                         </div>

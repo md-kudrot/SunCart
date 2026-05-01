@@ -3,15 +3,18 @@ import { authClient } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const Navbar = () => {
+    const router = useRouter();
     const userData = authClient.useSession();
     const user = userData.data?.user;
     console.log(user);
 
     const handleLogout = async () => {
         await authClient.signOut();
+        router.push('/');
     }
 
     const link = <>
@@ -70,7 +73,7 @@ const Navbar = () => {
                                     <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
                                 </Avatar>
 
-                                <Button variant='danger' className="cursor-pointer" onClick={handleLogout}>
+                                <Button variant='danger' className="cursor-pointer bg-[#00575E] text-[#F0B100]" onClick={handleLogout}>
                                     Logout
                                 </Button>
                             </div>
