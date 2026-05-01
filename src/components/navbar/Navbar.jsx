@@ -75,7 +75,7 @@ const Navbar = () => {
                                     <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
                                 </Avatar>
 
-                                <Button variant='danger' className="cursor-pointer bg-[#00575E] text-[#F0B100]" onClick={handleLogout}>
+                                <Button variant='danger' className="cursor-pointer rounded-sm bg-[#00575E] text-[#F0B100]" onClick={handleLogout}>
                                     Logout
                                 </Button>
                             </div>
