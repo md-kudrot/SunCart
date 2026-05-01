@@ -14,8 +14,8 @@ const details = async ({ params }) => {
     console.log(id)
     console.log(product)
     return (
-        <div className="p-8 w-[70%] mx-auto">
-            <div className="bg-base-100 flex flex-col shadow-xl p-4 border border-gray-500 rounded-2xl h-full ">
+        <div className="px-2 py-6 md:p-8 w-full max-w-5xl mx-auto">
+            <div className="bg-base-100 flex flex-col shadow-xl p-4 md:p-6 border border-gray-500 rounded-2xl h-full">
                 <figure className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-2xl shrink-0 bg-white">
                     <Image
                         src={product.image}
@@ -28,22 +28,22 @@ const details = async ({ params }) => {
 
                 <div className="mt-4 flex flex-col flex-1">
                     <div className="flex items-start justify-between gap-4">
-                        <h2 className="card-title text-5xl ">{product.name}</h2>
+                        <h2 className="card-title text-2xl md:text-4xl lg:text-5xl">{product.name}</h2>
                     </div>
-                    <p className="text-xl mt-4 text-gray-500">{product.brand}</p>
+                    <p className="text-base md:text-xl mt-3 md:mt-4 text-gray-500">{product.brand}</p>
 
                     <div className=''>
-                        <h3 className="text-4xl font-semibold mt-4">Description</h3>
-                        <p className="text-md mt-2 text-white w-[90%]">{product.description}</p>
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4">Description</h3>
+                        <p className="text-sm md:text-md mt-2 text-white w-full md:w-[90%]">{product.description}</p>
                     </div>
 
                     <div className="flex items-center justify-between pt-2 mt-auto">
-                        <p className="text-xl font-medium">Price</p>
-                        <span className="text-xl font-bold">${product.price.toFixed(2)}</span>
+                        <p className="text-base md:text-xl font-medium">Price</p>
+                        <span className="text-base md:text-xl font-bold">${product.price.toFixed(2)}</span>
                     </div>
                     <div className="flex items-start justify-between gap-4">
-                        <h2 className="card-title text-xl ">Rating</h2>
-                        <div className="text-yellow-500 text-2xl font-semibold flex gap-1 items-center shrink-0">
+                        <h2 className="card-title text-base md:text-xl">Rating</h2>
+                        <div className="text-yellow-500 text-lg md:text-2xl font-semibold flex gap-1 items-center shrink-0">
                             <p>★</p>
                             {product.rating}
                         </div>
@@ -52,7 +52,7 @@ const details = async ({ params }) => {
 
                     <div className="pt-4">
                         <Link href={`/popularSection/${product.id}`}>
-                            <button className="btn bg-[#00575E] text-[#F0B100] text-2xl py-6 w-full rounded-2xl btn-primary">Purchase</button>
+                            <button className="btn bg-[#00575E] text-[#F0B100] text-lg md:text-2xl py-4 md:py-6 w-full rounded-2xl btn-primary">Purchase</button>
                         </Link>
                     </div>
                 </div>
