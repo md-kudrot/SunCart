@@ -1,8 +1,18 @@
+"use client";
+import { authClient } from '@/lib/auth-client';
+import { Avatar, Button } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
+    const userData = authClient.useSession();
+    const user = userData.data?.user;
+    console.log(user);
+
+    const handleLogout = async () => {
+        await authClient.signOut();
+    }
 
     const link = <>
         <li><Link href="/">Home</Link></li>
@@ -28,19 +38,8 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    {/* img div */}
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <Image
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                                width={40}  // Add this
-                                height={40} // Add this
-                            />
-                        </div>
-                    </div>
 
-                    <a className="btn btn-ghost text-xl ">SunCart</a>
+                    <Link href="/" className="btn btn-ghost text-xl ">SunCart</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal text-[1.125rem] px-1">
@@ -49,11 +48,36 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
+
                 <div className="navbar-end gap-2">
-                    <Link href={"/login"} className="btn border border-[#274da1] text-[#708dcc] rounded-xl ">Login</Link>
-                    <Link href={"/signup"} className="btn text-[#b97e7e] border rounded-xl border-[#997070]      
-                    ">Sign Up</Link>
+                    {!user && (
+                        <>
+                            <Link href={"/login"} className="btn border border-[#274da1] text-[#708dcc] rounded-xl ">Login</Link>
+                            <Link href={"/signup"} className="btn text-[#b97e7e] border rounded-xl border-[#997070]      
+                            ">Sign Up</Link>
+                        </>
+                    )}
+
+                    {
+                        user && (
+                            <div className='flex gap-2'>
+                                <Avatar>
+                                    <Avatar.Image
+                                        alt={user?.name}
+                                        src={user?.image}
+                                        referrerPolicy='no-referrer'
+                                        />
+                                    <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                                </Avatar>
+
+                                <Button variant='danger' className="cursor-pointer" onClick={handleLogout}>
+                                    Logout
+                                </Button>
+                            </div>
+                        )
+                    }
                 </div>
+
             </div>
         </div>
     );
