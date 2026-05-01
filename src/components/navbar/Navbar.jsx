@@ -34,7 +34,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[#F0B100]">
                             {
                                 link
                             }
@@ -42,10 +42,12 @@ const Navbar = () => {
                     </div>
 
 
-                    <Link href="/" className="btn btn-ghost text-xl ">SunCart</Link>
+                    <Link href="/" className="btn btn-ghost text-xl ">
+                        <span className='text-[#F0B100]'>Sun</span> <span className='ml-18 absolute text-[#00575E]'>Cart</span>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal text-[1.125rem] px-1">
+                    <ul className="menu menu-horizontal text-[#F0B100] text-[1.125rem] px-1">
                         {
                             link
                         }
@@ -69,7 +71,7 @@ const Navbar = () => {
                                         alt={user?.name}
                                         src={user?.image}
                                         referrerPolicy='no-referrer'
-                                        />
+                                    />
                                     <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
                                 </Avatar>
 
