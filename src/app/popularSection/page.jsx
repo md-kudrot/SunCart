@@ -8,7 +8,7 @@ const PopularCart = async () => {
     const res = await fetch('https://sun-cart-tau.vercel.app/products.json');
     const products = await res.json();
     const popularProducts = products.slice(0, 3);
-    console.log(popularProducts);
+    // console.log(popularProducts);
 
     return (
         <div className='container mx-auto p-4 mt-10'>

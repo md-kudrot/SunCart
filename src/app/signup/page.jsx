@@ -26,7 +26,7 @@ export default function SignUpPage() {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log({ name, image, email, password });
+        // console.log({ name, image, email, password });
 
         const {data,error} = await authClient.signUp.email({
             name,
@@ -35,7 +35,7 @@ export default function SignUpPage() {
             password
         })
 
-        console.log({data,error})
+        // console.log({data,error})
 
         if (!error) {
             router.push("/");

@@ -5,7 +5,7 @@ import React from 'react';
 const Products = async () => {
     const res = await fetch("https://sun-cart-tau.vercel.app/products.json");
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     return (
         <div className='container mx-auto p-4 mt-10'>
             <h1 className='text-4xl font-bold mb-8'>All Products</h1>

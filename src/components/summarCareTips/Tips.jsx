@@ -4,7 +4,7 @@ import React from 'react';
 const Tips = async () => {
     const res = await fetch('https://sun-cart-tau.vercel.app/summerTips.json');
     const summerTips = await res.json();
-    console.log(summerTips);
+    // console.log(summerTips);
     return (
         <div className=' p-8 mt-10'>
             <h1 className='text-4xl font-bold'>Summer Care Tips</h1>

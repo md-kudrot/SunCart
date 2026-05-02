@@ -12,6 +12,7 @@ import {
     TextField,
 } from "@heroui/react";
 import { completeSoftNavigation } from "next/dist/client/components/segment-cache/navigation";
+import { toast } from "react-toastify";
 
 export default function SignInPage() {
     const onSubmit = async (e) => {
@@ -21,7 +22,7 @@ export default function SignInPage() {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log({ email, password });
+        // console.log({ email, password });
 
         const {data,error} = await authClient.signIn.email({
             email,
@@ -29,7 +30,12 @@ export default function SignInPage() {
             callbackURL: "/"
         })
 
-        console.log({data,error})
+        // console.log({data,error})
+
+        if (error) {
+            // console.log("Login failed:", error);
+            toast.error("Login failed: " + error.message);
+        }
     };
 
     return (

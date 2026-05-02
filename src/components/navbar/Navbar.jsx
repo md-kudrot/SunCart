@@ -10,7 +10,7 @@ const Navbar = () => {
     const router = useRouter();
     const userData = authClient.useSession();
     const user = userData.data?.user;
-    console.log(user);
+    // console.log(user);
 
     const handleLogout = async () => {
         await authClient.signOut();
