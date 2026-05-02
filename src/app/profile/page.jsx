@@ -11,8 +11,8 @@ const Profile = () => {
     const user = userData.data?.user;
     // console.log(user);
     return (
-        <div className="h-50vh flex items-center justify-center px-4 overflow-hidden">
-            <Card className="w-full h-[25rem] max-w-md flex flex-col items-center  justify-centerborder bg-black text-white p-6 md:p-8 rounded-lg">
+        <div className="h-50vh mt-20 py-10 flex items-center justify-center px-4 overflow-hidden">
+            <Card className="w-full h-100 max-w-md flex flex-col items-center  justify-centerborder bg-black text-white p-6 md:p-8 rounded-lg">
                 <Avatar className="h-16 w-16 md:h-24 md:w-24 lg:h-28 lg:w-28">
                     <Avatar.Image
                         alt={user?.name}

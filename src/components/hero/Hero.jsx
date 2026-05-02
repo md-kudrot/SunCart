@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-bg.png";
 
 const Hero = () => {
     return (
-        <section className="p-4">
+        <section className="p-4 mt-16">
          
             <div
                 className="w-full h-[45vh] rounded-2xl sm:h-[60vh] md:h-[75vh] lg:h-[90vh] bg-cover bg-center"
