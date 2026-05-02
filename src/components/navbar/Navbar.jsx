@@ -42,8 +42,8 @@ const Navbar = () => {
                     </div>
 
 
-                    <Link href="/" className="btn btn-ghost text-xl ">
-                        <span className='text-[#F0B100]'>Sun</span> <span className='ml-18 absolute text-[#00575E]'>Cart</span>
+                    <Link href="/" className=" text-2xl font-bold">
+                        <span className='text-[#F0B100]'>Sun</span> <span className='absolute text-[#00575E]'>Cart</span>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
