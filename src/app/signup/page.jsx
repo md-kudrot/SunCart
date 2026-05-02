@@ -13,6 +13,7 @@ import {
 } from "@heroui/react";
 import { completeSoftNavigation } from "next/dist/client/components/segment-cache/navigation";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
 
@@ -40,8 +41,12 @@ export default function SignUpPage() {
         if (!error) {
             router.push("/");
         }
-    };
 
+        if (error) {
+            toast.error("Signup failed: " + error.message);
+        }
+    };
+  
     return (
         <div className="p-4">
             <Card className="border mx-auto w-full sm:w-96 md:w-125 lg:w-125 py-5 sm:py-8 md:py-10 lg:py-10 mt-2 sm:mt-5 md:mt-5 lg:mt-5 bg-[#242020] text-white px-4 sm:px-6 md:px-8 lg:px-8">
