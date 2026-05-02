@@ -1,4 +1,5 @@
 "use client";
+import { useSearchParams } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -14,6 +15,7 @@ import {
 import { completeSoftNavigation } from "next/dist/client/components/segment-cache/navigation";
 import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 export default function SignInPage() {
     const onSubmit = async (e) => {
@@ -110,6 +112,11 @@ export default function SignInPage() {
                     <FaGoogle />
                     Sign in with Google
                 </Button>
+                <Link href={"/signup"}>
+                    <Button className={"w-full"} variant="secondary">
+                            Don't have an account? Sign Up
+                    </Button>
+                </Link>
             </Card>
         </div>
     );

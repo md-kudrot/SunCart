@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SunCart — Summer Essentials Store
 
-## Getting Started
+SunCart is a modern, responsive eCommerce demo built with Next.js and Tailwind CSS. It showcases a small catalogue of summer essentials (sunglasses, hats, skincare, bottles, and more) with authentication using BetterAuth and a simple profile/update flow.
 
-First, run the development server:
+Live demo: https://<your-deployment-url>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Key Features
+
+- Clean, responsive layout with persistent Navbar and Footer
+- Home page with hero banner, popular products, summer care tips, and top brands
+- Static product data in `public/products.json` (6 example products)
+- Products listing and product details pages (route: `/products`, `/popularSection/[id]`)
+- Authentication with BetterAuth (email/password + Google social login)
+- Protected routes for product details and profile (redirects to `/login` if unauthenticated)
+- User profile page and profile update form (`/profile`, `/profile/editprofile`)
+- Basic purchase CTA on product details
+- Animations using `animate.css`
+
+## Tech Stack
+
+- Next.js (App Router)
+- React 19
+- Tailwind CSS + DaisyUI
+- BetterAuth (authentication)
+- MongoDB adapter (server-side persistence)
+- HeroUI (`@heroui/react`) for UI primitives
+- animate.css for entrance animations
+- react-toastify for user notifications
+
+## Notable npm packages
+
+- `better-auth`, `@better-auth/mongo-adapter`
+- `next`, `react`, `react-dom`
+- `tailwindcss`, `daisyui`
+- `@heroui/react`, `animate.css`, `react-toastify`, `react-icons`, `lucide-react`
+
+## Project Structure (important files)
+
+- `app/layout.js` — Root layout with persistent Navbar & Footer
+- `app/page.js` — Home page composition (Hero, Popular, Tips, Companies)
+- `public/products.json` — Product data source
+- `app/products/page.jsx` — Products listing
+- `app/popularSection/[id]/page.jsx` — Product details (protected)
+- `app/login/page.jsx` — Login page
+- `app/signup/page.jsx` — Signup page
+- `app/profile/page.jsx` & `app/profile/editprofile/page.jsx` — Profile and update
+- `src/lib/auth.js` — BetterAuth server config (reads env vars)
+- `src/lib/auth-client.js` — BetterAuth client helper
+
+## Environment Variables
+
+Create a `.env` file (or configure platform env vars) with at least:
+
+- `MONGODB_URI` — MongoDB connection string (used by BetterAuth adapter)
+- `GOOGLE_CLIENT_ID` — Google OAuth client ID (for social login)
+- `GOOGLE_CLIENT_SECRET` — Google OAuth client secret
+
+Example `.env` (do not commit):
+
+```
+MONGODB_URI=mongodb+srv://<user>:<pass>@cluster0.mongodb.net/sun-cart
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run locally
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Install dependencies and run the dev server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open `http://localhost:3000` in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Authentication notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Sign up / Sign in pages are implemented using BetterAuth client helpers in `src/lib/auth-client.js`.
+- Google social login buttons are present on both login and signup pages.
+- Protected routes are enforced by `src/proxy.js` middleware which redirects to `/login` when there is no session.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Deploy to Vercel or Render. On Vercel, set the environment variables in the project settings and deploy the repository. Ensure the `MONGODB_URI` and Google OAuth callback URLs are configured correctly.
+
+
+
+

@@ -12,6 +12,7 @@ import {
     TextField,
 } from "@heroui/react";
 import { completeSoftNavigation } from "next/dist/client/components/segment-cache/navigation";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -137,6 +138,11 @@ export default function SignUpPage() {
                     <FaGoogle />
                     Sign Up with Google
                 </Button>
+                <Link href={"/login"}>
+                    <Button className={"w-full"} variant="secondary">
+                        Already have an account? Log In
+                    </Button>
+                </Link>
             </Card>
         </div>
     );
