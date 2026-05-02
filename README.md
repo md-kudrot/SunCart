@@ -2,7 +2,7 @@
 
 SunCart is a modern, responsive eCommerce demo built with Next.js and Tailwind CSS. It showcases a small catalogue of summer essentials (sunglasses, hats, skincare, bottles, and more) with authentication using BetterAuth and a simple profile/update flow.
 
-Live demo: https://<your-deployment-url>
+Live demo: https://sun-cart-tau.vercel.app
 
 ## Key Features
 
