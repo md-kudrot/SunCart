@@ -6,3 +6,5 @@ export const authClient = createAuthClient({
 })
 
 export const { signIn, signUp, useSession } = createAuthClient()
+
+//baseurl change kore diyechi, jodi local host e run korte chai tahole baseurl change kore dite hobe.
