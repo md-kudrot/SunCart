@@ -14,7 +14,7 @@ const details = async ({ params }) => {
     // console.log(id)
     // console.log(product)
     return (
-        <div className="px-2 py-6 md:p-8 w-full max-w-5xl mx-auto">
+        <div className="px-2 mt-20 py-6 md:p-8 w-full max-w-5xl mx-auto">
             <div className="bg-base-100 flex flex-col shadow-xl p-4 md:p-6 border border-gray-500 rounded-2xl h-full">
                 <figure className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-2xl shrink-0 bg-white">
                     <Image
