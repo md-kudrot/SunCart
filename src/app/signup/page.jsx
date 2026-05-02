@@ -39,8 +39,15 @@ export default function SignUpPage() {
 
         // console.log({data,error})
 
+        // if (!error) {
+        //     router.push("/");
+        // }
+
         if (!error) {
-            router.push("/");
+            await authClient.signOut();
+
+            toast.success("Signup successful! Please log in.");
+            router.push("/login");
         }
 
         if (error) {
