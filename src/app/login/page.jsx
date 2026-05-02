@@ -12,6 +12,7 @@ import {
     TextField,
 } from "@heroui/react";
 import { completeSoftNavigation } from "next/dist/client/components/segment-cache/navigation";
+import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 export default function SignInPage() {
@@ -24,7 +25,7 @@ export default function SignInPage() {
 
         // console.log({ email, password });
 
-        const {data,error} = await authClient.signIn.email({
+        const { data, error } = await authClient.signIn.email({
             email,
             password,
             callbackURL: "/"
@@ -38,13 +39,18 @@ export default function SignInPage() {
         }
     };
 
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: 'google'
+        })
+    }
     return (
         <div className="p-4 py-18 mt-20">
             <Card className="border mx-auto w-full sm:w-96 md:w-125 lg:w-125 py-5 sm:py-8 md:py-10 lg:py-10 mt-2 sm:mt-5 md:mt-5 lg:mt-5 bg-[#242020] text-white px-4 sm:px-6 md:px-8 lg:px-8">
                 <h1 className="text-center text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold">Sign In</h1>
 
                 <Form className="flex w-full sm:w-80 md:w-96 lg:w-96 mx-auto flex-col gap-3 sm:gap-4 md:gap-4 lg:gap-4" onSubmit={onSubmit}>
-                  
+
                     <TextField
                         isRequired
                         name="email"
@@ -99,6 +105,11 @@ export default function SignInPage() {
                         </Button>
                     </div>
                 </Form>
+                <p className="text-center text-2xl font-semibold">or</p>
+                <Button variant="secondary" className="w-full bg-[#00D3BB] text-white font-bold" onClick={handleGoogleSignIn}>
+                    <FaGoogle />
+                    Sign in with Google
+                </Button>
             </Card>
         </div>
     );

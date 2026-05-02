@@ -8,9 +8,15 @@ const db = client.db("sun-cart");
 export const auth = betterAuth({
     emailAndPassword: {
         enabled: true,
-    }, 
+    },
     database: mongodbAdapter(db, {
         // Optional: if you don't provide a client, database transactions won't be enabled.
         client
     }),
-});
+    socialProviders: {
+        google: {
+            clientId: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        },
+    }
+})
