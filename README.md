@@ -4,6 +4,9 @@ SunCart is a modern, responsive eCommerce demo built with Next.js and Tailwind C
 
 Live demo: https://sun-cart-tau.vercel.app
 
+<img width="1313" height="896" alt="image" src="https://github.com/user-attachments/assets/e128213a-fbf8-46a8-ace4-46da43f25000" />
+
+
 ## Key Features
 
 - Clean, responsive layout with persistent Navbar and Footer
